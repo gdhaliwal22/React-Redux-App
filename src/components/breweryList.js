@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import BreweryCard from './breweryCard';
-import { getBrewery} from '../store/actions';
+import { getBrewery } from '../store/actions';
 
 
 
@@ -12,7 +12,9 @@ const BreweryList =(props) => {
 
   useEffect(() => {
     getBrewery(url);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[url])
+   
 
   if (isFetching) {
     return <h1>Breweries are coming!</h1>
